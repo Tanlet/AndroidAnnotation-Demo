@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AnnotationDemo</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="fv_ORMLite">ORMLite DataBase</string>
+    <string name="fv_picture">Take a picture</string>
+    <string name="fv_system">System Service</string>
+    <string name="fv_bean">Bean Module</string>
+    <string name="fv_main">Android Annotation</string>
+    <string name="ormliteItemclick">Try to click a item</string>
+    <string name="ormliteAddItem">Add</string>
+    <string name="ormliteItemlongclick">Try to click a item longly</string>
+    <string name="ormliteItemClear">Clear</string>
+    <string name="systemNotificatioin">sent a Notification</string>
+    <string name="sysytemUI">Work in UI Thread</string>
+    <string name="systemBackground">Work in background</string>
+    <string name="systemUIDelay">Work in UI Delay</string>
+    <string name="picture">Picture</string>
+    <string name="takepicture">take a picture</string>
+
+</resources>

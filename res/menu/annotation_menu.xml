@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/fv_menu_ormlite"
+        android:icon="@drawable/cancel"
+        android:title="@string/fv_ORMLite">
+    </item>
+    <item
+        android:id="@+id/fv_menu_picture"
+        android:icon="@drawable/collapse"
+        android:title="@string/fv_picture">
+    </item>
+    <item
+        android:id="@+id/fv_menu_system"
+        android:icon="@drawable/help"
+        android:title="@string/fv_system">
+    </item>
+    <item
+        android:id="@+id/fv_menu_bean"
+        android:icon="@drawable/split"
+        android:title="@string/fv_bean">
+    </item>
+    <item
+        android:id="@+id/fv_menu_main"
+        android:icon="@drawable/ic_launcher"
+        android:title="@string/fv_main">
+    </item>
+
+</menu>
