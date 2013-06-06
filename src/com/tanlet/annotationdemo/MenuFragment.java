@@ -15,11 +15,12 @@
 
 package com.tanlet.annotationdemo;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragment;
 import com.googlecode.androidannotations.annotations.AfterViews;
@@ -44,15 +45,16 @@ public class MenuFragment extends SherlockFragment {
 	private final String SYSTEM_TITLE = "Take a picture";
 	private final String BEAN_TITLE = "System Serviice";
 	private final String PICTURE_TITLE = "Bean Module";
-	private final String MAIN_TITLE = "Android Annotation";
+	private final String ANNOTATION_WIKI = "Android Annotation";
+	private final String TANLET_BLOG = "Tanlet Toｍ的博客";
 	private final String[] menuTitle = new String[] { ORM_TITLE, SYSTEM_TITLE,
-			BEAN_TITLE, PICTURE_TITLE, MAIN_TITLE };
+			BEAN_TITLE, PICTURE_TITLE, ANNOTATION_WIKI, TANLET_BLOG };
 
 	private OrmliteFragment ormFragment;
 	private SystemFragment systemFragment;
 	private BeanFragment beanFragment;
 	private PictureFragment pictureFragment;
-	private WebFragment mainFragment;
+	private WebFragment_ webFragment;
 
 	@ViewById
 	protected ListView lvMenu;
@@ -88,17 +90,18 @@ public class MenuFragment extends SherlockFragment {
 				this.pictureFragment = PictureFragment_.builder().build();
 			}
 			this.commitMainFragment(pictureFragment);
-		} else if (result.equals(MAIN_TITLE)) {
-			if (this.mainFragment == null) {
-				this.mainFragment = WebFragment_.builder().build();
-			}
-			this.commitMainFragment(mainFragment);
+		} else if (result.equals(ANNOTATION_WIKI)) {
+			Uri uri = Uri.parse(WebFragment.URL_GITHUB_ANNOTATION);
+			Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+			startActivity(intent);
+		} else if (result.equals(TANLET_BLOG)) {
+			Uri uri = Uri.parse(WebFragment.URL_TANLET_BLOG);
+			Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+			startActivity(intent);
 		}
 	}
 
 	private void commitMainFragment(Fragment main) {
-		Toast.makeText(getActivity(), " YOU ", 1000).show();
-
 		getActivity().getSupportFragmentManager().beginTransaction()
 				.replace(R.id.fl_main, main)
 				.addToBackStack(MainActivity.FRAGMENT_TAG)

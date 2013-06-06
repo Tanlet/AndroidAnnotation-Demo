@@ -20,9 +20,11 @@ import android.support.v4.app.Fragment;
 import android.webkit.SslErrorHandler;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EFragment;
+import com.googlecode.androidannotations.annotations.UiThread;
 import com.googlecode.androidannotations.annotations.ViewById;
 
 /**
@@ -32,20 +34,26 @@ import com.googlecode.androidannotations.annotations.ViewById;
 public class WebFragment extends Fragment {
 	@ViewById
 	protected WebView wv_annotation;
+
 	public static String URL_TANLET_BLOG = "http://tanlettom.com";
 	public static String URL_GITHUB_ANNOTATION = "https://github.com/excilys/androidannotations";
 
 	@AfterViews
 	protected void init() {
 		loadUrl(URL_TANLET_BLOG);
-
 		this.wv_annotation.setInitialScale(50);
 		this.wv_annotation.getSettings().setJavaScriptEnabled(true);
 		this.wv_annotation.getSettings().setDefaultTextEncodingName("gb2312");
 
 	}
 
+	@UiThread
 	public void loadUrl(String url) {
-		this.wv_annotation.loadUrl(url);
+		if (this.wv_annotation != null) {
+
+			this.wv_annotation.loadUrl(url);
+		} else {
+			Toast.makeText(getActivity(), "Fuck", 1000).show();
+		}
 	}
 }

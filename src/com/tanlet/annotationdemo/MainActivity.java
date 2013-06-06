@@ -24,10 +24,8 @@ public class MainActivity extends SherlockFragmentActivity {
 
 	@OptionsItem(android.R.id.home)
 	public void actionBarClick() {
-		Toast.makeText(getApplicationContext(), "Show Time", 1000).show();
-		// switchMenu();
-		getSupportFragmentManager().beginTransaction().remove(menuFragment)
-				.commit();
+		getSupportFragmentManager().beginTransaction()
+				.replace(R.id.fl_main, menuFragment).commit();
 	}
 
 	private void initMain() {
@@ -40,7 +38,6 @@ public class MainActivity extends SherlockFragmentActivity {
 	private void switchMenu() {
 		getSupportFragmentManager().beginTransaction()
 				.replace(R.id.fl_main, menuFragment)
-				.addToBackStack(FRAGMENT_TAG)
 				.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
 				.commit();
 	}
