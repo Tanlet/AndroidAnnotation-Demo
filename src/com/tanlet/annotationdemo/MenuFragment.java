@@ -16,6 +16,7 @@
 package com.tanlet.annotationdemo;
 
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -26,9 +27,13 @@ import com.googlecode.androidannotations.annotations.EFragment;
 import com.googlecode.androidannotations.annotations.ItemClick;
 import com.googlecode.androidannotations.annotations.ViewById;
 import com.tanlet.annotation.bean.BeanFragment;
+import com.tanlet.annotation.bean.BeanFragment_;
 import com.tanlet.annotation.system.SystemFragment;
+import com.tanlet.annotation.system.SystemFragment_;
 import com.tanlet.ormlite.OrmliteFragment;
+import com.tanlet.ormlite.OrmliteFragment_;
 import com.tanlet.picture.PictureFragment;
+import com.tanlet.picture.PictureFragment_;
 
 /**
  * @author <a href='mailto:tanletwork@gmail.com'>Tanlet</a>
@@ -65,35 +70,40 @@ public class MenuFragment extends SherlockFragment {
 		String result = this.menuTitle[position];
 		if (result.endsWith(ORM_TITLE)) {
 			if (this.ormFragment == null) {
-				this.ormFragment = new OrmliteFragment();
+				this.ormFragment = OrmliteFragment_.builder().build();
 			}
 			this.commitMainFragment(ormFragment);
 		} else if (result.equals(SYSTEM_TITLE)) {
 			if (this.systemFragment == null) {
-				this.systemFragment = new SystemFragment();
+				this.systemFragment = SystemFragment_.builder().build();
 			}
 			this.commitMainFragment(systemFragment);
 		} else if (result.equals(BEAN_TITLE)) {
 			if (this.beanFragment == null) {
-				this.beanFragment = new BeanFragment();
+				this.beanFragment = BeanFragment_.builder().build();
 			}
 			this.commitMainFragment(beanFragment);
 		} else if (result.equals(PICTURE_TITLE)) {
 			if (this.pictureFragment == null) {
-				this.pictureFragment = new PictureFragment();
+				this.pictureFragment = PictureFragment_.builder().build();
 			}
 			this.commitMainFragment(pictureFragment);
 		} else if (result.equals(MAIN_TITLE)) {
 			if (this.mainFragment == null) {
-				this.mainFragment = new WebFragment();
+				this.mainFragment = WebFragment_.builder().build();
 			}
 			this.commitMainFragment(mainFragment);
 		}
 	}
 
 	private void commitMainFragment(Fragment main) {
-		Toast.makeText(getActivity(), "Fuckkk", 1000).show();
+		Toast.makeText(getActivity(), " YOU ", 1000).show();
+
 		getActivity().getSupportFragmentManager().beginTransaction()
-				.replace(R.id.fl_main, main).commit();
+				.replace(R.id.fl_main, main)
+				.addToBackStack(MainActivity.FRAGMENT_TAG)
+				.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+				.commit();
+
 	}
 }
