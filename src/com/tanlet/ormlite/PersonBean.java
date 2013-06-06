@@ -19,7 +19,7 @@ import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
 /**
- * @author <a href='mailto:tanletwork@gmail.com'>Tanlet</a>
+ * @author <a href='http://tanlettom.com'>Tanlet</a>
  */
 @DatabaseTable(tableName = "_persontable")
 public class PersonBean {

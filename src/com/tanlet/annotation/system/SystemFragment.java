@@ -39,16 +39,14 @@ import android.widget.Toast;
 
 /**
  * Show some system tag in annotation:<a href=
- * 'https://github.com/excilys/androidannotations/wiki/SystemServices'>@SystemServices</a
- * > <a href=
- * 'https://github.com/excilys/androidannotations/wiki/WorkingWithThreads'>@UiThread</a
- * > <a href=
- * 'https://github.com/excilys/androidannotations/wiki/WorkingWithThreads'>@UiThread</a
- * >
+ * 'https://github.com/excilys/androidannotations/wiki/SystemServices'>@SystemServices</
+ * a > <a href=
+ * 'https://github.com/excilys/androidannotations/wiki/WorkingWithThreads'>@UiThread</
+ * a > <a href=
+ * 'https://github.com/excilys/androidannotations/wiki/WorkingWithThreads'>@UiThread</
+ * a >
  * 
- * @author <a href=
- *         'https://github.com/excilys/androidannotations/wiki/WorkingWithThreads'>@Background</a
- *         >
+ * @author <a href='http://tanlettom.com'>Tanlet</a>
  */
 @EFragment(R.layout.system_fragment)
 public class SystemFragment extends Fragment {

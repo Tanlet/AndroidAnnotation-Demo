@@ -26,7 +26,7 @@ import com.googlecode.androidannotations.annotations.UiThread;
 import com.googlecode.androidannotations.annotations.ViewById;
 
 /**
- * @author <a href='mailto:tanletwork@gmail.com'>Tanlet</a>
+ * @author <a href='http://tanlettom.com'>Tanlet</a>
  */
 @EBean
 public class CalBean {

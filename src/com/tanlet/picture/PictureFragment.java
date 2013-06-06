@@ -38,7 +38,7 @@ import com.googlecode.androidannotations.annotations.ViewById;
 import com.tanlet.annotationdemo.R;
 
 /**
- * @author <a href='mailto:tanletwork@gmail.com'>Tanlet</a>
+ * @author <a href='http://tanlettom.com'>Tanlet</a>
  */
 @EFragment(R.layout.picture_fragment)
 public class PictureFragment extends Fragment {

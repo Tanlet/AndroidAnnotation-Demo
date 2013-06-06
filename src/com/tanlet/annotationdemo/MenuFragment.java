@@ -37,7 +37,7 @@ import com.tanlet.picture.PictureFragment;
 import com.tanlet.picture.PictureFragment_;
 
 /**
- * @author <a href='mailto:tanletwork@gmail.com'>Tanlet</a>
+ * @author <a href='http://tanlettom.com'>Tanlet</a>
  */
 @EFragment(R.layout.menu_fragment)
 public class MenuFragment extends SherlockFragment {

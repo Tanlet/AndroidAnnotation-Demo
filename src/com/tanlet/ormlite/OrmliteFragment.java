@@ -44,7 +44,7 @@ import android.widget.Toast;
  * href='https://github.com/excilys/androidannotations/wiki/Ormlite'>
  * OrmLiteDao</a> annotation. About <a href='http://ormlite.com/'>OrmLite</a>
  * 
- * @author <a href='mailto:tanletwork@gmail.com'>Tanlet</a>
+ * @author <a href='http://tanlettom.com'>Tanlet</a>
  */
 @EFragment(R.layout.ormlite_fragment)
 public class OrmliteFragment extends Fragment {

@@ -23,7 +23,7 @@ import com.googlecode.androidannotations.annotations.EFragment;
 import com.tanlet.annotationdemo.R;
 
 /**
- * @author <a href='mailto:tanletwork@gmail.com'>Tanlet</a>
+ * @author <a href='http://tanlettom.com'>Tanlet</a>
  */
 @EFragment(R.layout.bean_fragment)
 public class BeanFragment extends Fragment {

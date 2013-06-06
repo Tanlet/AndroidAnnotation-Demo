@@ -15,11 +15,8 @@
 
 package com.tanlet.annotationdemo;
 
-import android.net.http.SslError;
 import android.support.v4.app.Fragment;
-import android.webkit.SslErrorHandler;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.Toast;
 
 import com.googlecode.androidannotations.annotations.AfterViews;
@@ -28,7 +25,7 @@ import com.googlecode.androidannotations.annotations.UiThread;
 import com.googlecode.androidannotations.annotations.ViewById;
 
 /**
- * @author <a href='mailto:tanletwork@gmail.com'>Tanlet</a>
+ * @author <a href='http://tanlettom.com'>Tanlet</a>
  */
 @EFragment(R.layout.main_fragment)
 public class WebFragment extends Fragment {

@@ -27,7 +27,7 @@ import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 
 /**
- * @author <a href='mailto:tanletwork@gmail.com'>Tanlet</a>
+ * @author <a href='http://tanlettom.com'>Tanlet</a>
  */
 public class PersonHelp extends OrmLiteSqliteOpenHelper {
 	private static final String TAG = PersonHelp.class.getName();
