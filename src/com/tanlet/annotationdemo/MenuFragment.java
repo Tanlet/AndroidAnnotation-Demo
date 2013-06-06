@@ -42,9 +42,9 @@ import com.tanlet.picture.PictureFragment_;
 @EFragment(R.layout.menu_fragment)
 public class MenuFragment extends SherlockFragment {
 	private final String ORM_TITLE = "ORMLite DataBase";
-	private final String SYSTEM_TITLE = "Take a picture";
-	private final String BEAN_TITLE = "System Serviice";
-	private final String PICTURE_TITLE = "Bean Module";
+	private final String SYSTEM_TITLE = "System Serviice";
+	private final String BEAN_TITLE = "Bean Module";
+	private final String PICTURE_TITLE = "Take a picture";
 	private final String ANNOTATION_WIKI = "Android Annotation";
 	private final String TANLET_BLOG = "Tanlet Toｍ的博客";
 	private final String[] menuTitle = new String[] { ORM_TITLE, SYSTEM_TITLE,
@@ -54,7 +54,6 @@ public class MenuFragment extends SherlockFragment {
 	private SystemFragment systemFragment;
 	private BeanFragment beanFragment;
 	private PictureFragment pictureFragment;
-	private WebFragment_ webFragment;
 
 	@ViewById
 	protected ListView lvMenu;
@@ -89,7 +88,7 @@ public class MenuFragment extends SherlockFragment {
 			if (this.pictureFragment == null) {
 				this.pictureFragment = PictureFragment_.builder().build();
 			}
-			this.commitMainFragment(pictureFragment);
+			this.commitMainFragment(this.pictureFragment);
 		} else if (result.equals(ANNOTATION_WIKI)) {
 			Uri uri = Uri.parse(WebFragment.URL_GITHUB_ANNOTATION);
 			Intent intent = new Intent(Intent.ACTION_VIEW, uri);
