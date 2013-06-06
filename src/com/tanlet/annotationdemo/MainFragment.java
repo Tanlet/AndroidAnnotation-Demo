@@ -34,7 +34,6 @@ public class MainFragment extends Fragment {
 	protected WebView wv_annotation;
 	public static String URL_TANLET_BLOG = "http://tanlettom.com";
 	public static String URL_GITHUB_ANNOTATION = "https://github.com/excilys/androidannotations";
-	private String current_url = URL_TANLET_BLOG;
 
 	@AfterViews
 	protected void init() {
@@ -46,7 +45,7 @@ public class MainFragment extends Fragment {
 
 	}
 
-	private void loadUrl(String url) {
+	public void loadUrl(String url) {
 		this.wv_annotation.loadUrl(url);
 	}
 }
