@@ -51,8 +51,6 @@ public class PictureFragment extends Fragment {
 		this.doTakePhotoAction();
 	}
 
-	PictureFragment_ a;
-
 	@OnActivityResult(value = 10086)
 	protected void cutPicture(int resultCode, Intent result) {
 		if (resultCode != Activity.RESULT_OK)

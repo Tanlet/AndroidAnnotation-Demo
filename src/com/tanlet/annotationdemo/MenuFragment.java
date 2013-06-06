@@ -18,6 +18,7 @@ package com.tanlet.annotationdemo;
 import android.support.v4.app.Fragment;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragment;
 import com.googlecode.androidannotations.annotations.AfterViews;
@@ -91,7 +92,7 @@ public class MenuFragment extends SherlockFragment {
 	}
 
 	private void commitMainFragment(Fragment main) {
-
+		Toast.makeText(getActivity(), "Fuckkk", 1000).show();
 		getActivity().getSupportFragmentManager().beginTransaction()
 				.replace(R.id.fl_main, main).commit();
 	}

@@ -32,21 +32,21 @@ import com.googlecode.androidannotations.annotations.ViewById;
 public class MainFragment extends Fragment {
 	@ViewById
 	protected WebView wv_annotation;
+	public static String URL_TANLET_BLOG = "http://tanlettom.com";
+	public static String URL_GITHUB_ANNOTATION = "https://github.com/excilys/androidannotations";
+	private String current_url = URL_TANLET_BLOG;
 
 	@AfterViews
 	protected void init() {
-		this.wv_annotation.loadUrl("https://github.com/excilys/androidannotations");
-		this.wv_annotation.setWebViewClient(new WebViewClient() {
-		
-			@Override
-			public void onReceivedSslError(WebView view,
-					SslErrorHandler handler, SslError error) {
-				handler.proceed();
-			}
-		});
- 
+		loadUrl(URL_TANLET_BLOG);
+
+		// this.wv_annotation.getSettings().set
 		this.wv_annotation.getSettings().setJavaScriptEnabled(true);
 		this.wv_annotation.getSettings().setDefaultTextEncodingName("gb2312");
 
+	}
+
+	private void loadUrl(String url) {
+		this.wv_annotation.loadUrl(url);
 	}
 }
