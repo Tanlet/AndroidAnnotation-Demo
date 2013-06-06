@@ -47,7 +47,7 @@ public class MenuFragment extends SherlockFragment {
 	private SystemFragment systemFragment;
 	private BeanFragment beanFragment;
 	private PictureFragment pictureFragment;
-	private MainFragment mainFragment;
+	private WebFragment mainFragment;
 
 	@ViewById
 	protected ListView lvMenu;
@@ -85,7 +85,7 @@ public class MenuFragment extends SherlockFragment {
 			this.commitMainFragment(pictureFragment);
 		} else if (result.equals(MAIN_TITLE)) {
 			if (this.mainFragment == null) {
-				this.mainFragment = new MainFragment();
+				this.mainFragment = new WebFragment();
 			}
 			this.commitMainFragment(mainFragment);
 		}

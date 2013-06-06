@@ -29,7 +29,7 @@ import com.googlecode.androidannotations.annotations.ViewById;
  * @author <a href='mailto:tanletwork@gmail.com'>Tanlet</a>
  */
 @EFragment(R.layout.main_fragment)
-public class MainFragment extends Fragment {
+public class WebFragment extends Fragment {
 	@ViewById
 	protected WebView wv_annotation;
 	public static String URL_TANLET_BLOG = "http://tanlettom.com";
