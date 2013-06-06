@@ -39,7 +39,7 @@ public class WebFragment extends Fragment {
 	protected void init() {
 		loadUrl(URL_TANLET_BLOG);
 
-		// this.wv_annotation.getSettings().set
+		this.wv_annotation.setInitialScale(50);
 		this.wv_annotation.getSettings().setJavaScriptEnabled(true);
 		this.wv_annotation.getSettings().setDefaultTextEncodingName("gb2312");
 
